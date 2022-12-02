@@ -13,6 +13,8 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Commands {
+    #[command(about = "Run all the solutions to all the problems")]
+    All { year: Option<u32> },
     #[command(about = "Run a solution to a problem")]
     Run {
         day: u32,
@@ -29,6 +31,21 @@ fn main() {
     let args = Cli::parse();
 
     match args.command {
+        Commands::All {year} => {
+            let year = year.unwrap_or(DEFAULT_YEAR);
+            let solutions = solutions::get_year(year);
+
+            for (i, e) in solutions.iter().enumerate() {
+                let day = (i + 1).try_into().unwrap();
+                let input = solution::load(year, day, "input.txt");
+                println!("Running: {}. {}", day, e.name());
+                let result_a = e.part_a(&input);
+                println!("[+] RESULT A: {result_a}");
+                let result_b = e.part_b(&input);
+                println!("[+] RESULT B: {result_b}");
+                println!()
+            }
+        }
         Commands::Run { year, day, part } => {
             let year = year.unwrap_or(DEFAULT_YEAR);
             let day_index = day.saturating_sub(1);
