@@ -1,8 +1,8 @@
 use crate::Answer;
 
-pub struct Day03;
+pub struct Day25;
 
-impl Answer for Day03 {
+impl Answer for Day25 {
     fn name(&self) -> &'static str {
         "?"
     }
@@ -23,13 +23,13 @@ mod tests {
 
     #[test]
     fn test_part_a() {
-        let input = load(2022, 03, "test.txt");
-        assert_eq!("Not A", Day03.part_a(&input))
+        let input = load(2022, 25, "test.txt");
+        assert_eq!("Not A", Day25.part_a(&input))
     }
 
     #[test]
     fn test_part_b() {
-        let input = load(2022, 03, "test.txt");
-        assert_eq!("Not B", Day03.part_b(&input))
+        let input = load(2022, 25, "test.txt");
+        assert_eq!("Not B", Day25.part_b(&input))
     }
 }
