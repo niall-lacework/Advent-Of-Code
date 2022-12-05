@@ -38,9 +38,12 @@ fn main() {
             for (i, e) in solutions.iter().enumerate() {
                 let day = (i + 1).try_into().unwrap();
                 let input = solution::load(year, day, "input.txt");
+                
                 println!("Running: {}. {}", day, e.name());
+                
                 let result_a = e.part_a(&input);
                 println!("[+] RESULT A: {result_a}");
+                
                 let result_b = e.part_b(&input);
                 println!("[+] RESULT B: {result_b}");
                 println!()
