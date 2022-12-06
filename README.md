@@ -24,9 +24,9 @@ $ cargo test
 # Run tests for a particular day
 $ cargo test day_XX
 ```
-## Stars obtained
+## Stars collected
 
-### 04 / 50 :star:
+### 08 / 50 :star:
 
 ## Other Advent of Code solutions
 
@@ -37,4 +37,4 @@ $ cargo test day_XX
 
 ## Acknowledgements
 
-Thanks to [Eric Wastl](https://github.com/topaz) for creating and managing the Advent of Code project.
+Thanks [Eric Wastl](https://github.com/topaz) for creating and managing the Advent of Code project.
