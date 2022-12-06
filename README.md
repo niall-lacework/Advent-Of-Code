@@ -26,7 +26,7 @@ $ cargo test day_XX
 ```
 ## Stars collected
 
-### 08 / 50 :star:
+### 12 / 50 :star:
 
 ## Other Advent of Code solutions
 
