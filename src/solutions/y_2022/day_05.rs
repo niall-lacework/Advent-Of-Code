@@ -63,7 +63,7 @@ impl Answer for Day05 {
         let instructions = input.split("\n").collect::<Vec<&str>>();
         for instruction in instructions {
             if instruction.starts_with("move") {
-                println!("Instruction: {}", instruction);
+                // println!("Instruction: {}", instruction);
                 let parts = instruction.split(" ").collect::<Vec<&str>>();
                 let amount = parts[1].parse::<usize>().unwrap();
                 let from = parts[3].parse::<usize>().unwrap() - 1;
@@ -74,7 +74,7 @@ impl Answer for Day05 {
                     stacks[to].insert(0, *val);
                     stacks[from].remove(0);
                 }
-                println!("Stacks: {:?}", stacks);
+                // println!("Stacks: {:?}", stacks);
             }
         }
         let code = stacks.iter().map(|s| s[0]).collect::<String>();

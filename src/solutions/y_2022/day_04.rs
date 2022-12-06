@@ -15,10 +15,10 @@ impl Answer for Day04 {
             let (lower_bound, upper_bound) = get_bounds(pairs[0]);
             let (lower_bound_2, upper_bound_2) = get_bounds(pairs[1]);
             if is_fully_contained(lower_bound, upper_bound, lower_bound_2, upper_bound_2) {
-                println!(
-                    "Contained: {}-{}, {}-{}",
-                    lower_bound, upper_bound, lower_bound_2, upper_bound_2
-                );
+                // println!(
+                //     "Contained: {}-{}, {}-{}",
+                //     lower_bound, upper_bound, lower_bound_2, upper_bound_2
+                // );
                 overlaps += 1;
             }
         }
@@ -33,10 +33,10 @@ impl Answer for Day04 {
             let (lower_bound, upper_bound) = get_bounds(pairs[0]);
             let (lower_bound_2, upper_bound_2) = get_bounds(pairs[1]);
             if is_overlapping(lower_bound, upper_bound, lower_bound_2, upper_bound_2) {
-                println!(
-                    "Overlap: {}-{}, {}-{}",
-                    lower_bound, upper_bound, lower_bound_2, upper_bound_2
-                );
+                // println!(
+                //     "Overlap: {}-{}, {}-{}",
+                //     lower_bound, upper_bound, lower_bound_2, upper_bound_2
+                // );
                 overlaps += 1;
             }
         }

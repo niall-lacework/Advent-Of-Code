@@ -13,7 +13,7 @@ impl Answer for Day06 {
     fn part_a(&self, input: &str) -> String {
         let mut marker: Vec<char> = Vec::new();
         for (position, character) in input.chars().enumerate() {
-            println!("Marker: {:?}", marker);
+            // println!("Marker: {:?}", marker);
             marker.push(character); // Add the character to the marker
             if marker.len() > 4 {
                 marker.remove(0);
@@ -26,7 +26,7 @@ impl Answer for Day06 {
             for i in setv {
                 temp_vec.push(i);
             }
-            println!("Set: {:?}", temp_vec);
+            // println!("Set: {:?}", temp_vec);
             if temp_vec.len() == 4 {
                 return (position + 1).to_string(); // If the set is 4, return the position
             }
@@ -38,7 +38,7 @@ impl Answer for Day06 {
     fn part_b(&self, input: &str) -> String {
         let mut marker: Vec<char> = Vec::new();
         for (position, character) in input.chars().enumerate() {
-            println!("Marker: {:?}", marker);
+            // println!("Marker: {:?}", marker);
             marker.push(character); // Add the character to the marker
             if marker.len() > 14 {
                 marker.remove(0);
@@ -51,7 +51,7 @@ impl Answer for Day06 {
             for i in setv {
                 temp_vec.push(i);
             }
-            println!("Set: {:?}", temp_vec);
+            // println!("Set: {:?}", temp_vec);
             if temp_vec.len() == 14 {
                 return (position + 1).to_string(); // If the set is 4, return the position
             }
